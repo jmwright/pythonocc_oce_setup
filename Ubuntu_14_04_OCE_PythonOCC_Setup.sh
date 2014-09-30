@@ -8,7 +8,7 @@ apt-get update
 apt-get upgrade
 
 #Install the pre-requisites
-apt-get install -y git cmake
+apt-get install -y git cmake libx11-dev
 
 #Clone OCE and try to compile it
 git clone --branch $TAG git://github.com/tpaviot/oce.git
