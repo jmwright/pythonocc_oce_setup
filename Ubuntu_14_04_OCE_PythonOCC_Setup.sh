@@ -13,6 +13,6 @@ apt-get install -y git cmake libx11-dev mesa-common-dev freeglut3-dev libfreetyp
 #Clone OCE and try to compile it
 git clone --branch $TAG git://github.com/tpaviot/oce.git
 
-#Move into the oce directory and prepare to compile it
+#Move into the oce directory and prepare to run cmake
 cd oce; mkdir build; cd build
-cmake ..
+cmake .. -DCMAKE_C_COMPILER=/usr/bin/gcc
