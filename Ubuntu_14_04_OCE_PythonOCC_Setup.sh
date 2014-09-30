@@ -8,7 +8,7 @@ apt-get update
 apt-get upgrade
 
 #Install the pre-requisites
-apt-get install -fy git cmake libx11-dev mesa-common-dev freeglut3-dev libfreetype6-dev libc6-dev libstdc++ build-essential gcc g++
+apt-get install -fy git cmake libx11-dev mesa-common-dev freeglut3-dev libfreetype6-dev libc6-dev libstdc++-4.8-dev build-essential gcc g++
 
 #Clone OCE and try to compile it
 git clone --branch $TAG git://github.com/tpaviot/oce.git
