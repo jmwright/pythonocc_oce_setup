@@ -2,7 +2,8 @@
 #This script needs to be run with superuser priveleges
 
 #Set up our variables
-TAG="OCE-0.12"
+#TAG="OCE-0.12"
+TAG="OCE-0.16"
 
 apt-get update
 apt-get upgrade
