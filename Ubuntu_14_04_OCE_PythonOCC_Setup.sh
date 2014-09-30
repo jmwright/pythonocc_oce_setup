@@ -5,7 +5,7 @@ apt-get update
 apt-get upgrade
 
 #Install the pre-requisites
-apt-get install git
+apt-get install -y git
 
 #Clone OCE and try to compile it
-git clone git://github.com/tpaviot/oce.git
+git clone --branch OCE-0.12 git://github.com/tpaviot/oce.git
