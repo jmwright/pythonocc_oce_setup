@@ -3,7 +3,8 @@
 
 #Set up our variables
 #TAG="OCE-0.12"
-TAG="OCE-0.16"
+OCETAG="OCE-0.16"
+PYTHONOCCTAG="0.5"
 GEOMPATH="pythonocc/src/contrib/geom-6.3.1.8/cmake-build"
 
 apt-get update
@@ -13,7 +14,7 @@ apt-get update
 # apt-get install -fy git cmake libx11-dev mesa-common-dev freeglut3-dev libfreetype6-dev libc6-dev libstdc++6 libstdc++-4.8-dev build-essential gcc g++ libftgl-dev xorg-dev tcl-dev tk-dev
 
 # #Clone OCE and try to compile it
-# git clone --branch $TAG git://github.com/tpaviot/oce.git
+# git clone --branch $OCETAG git://github.com/tpaviot/oce.git
 
 # #Move into the oce directory and prepare to run cmake
 # cd oce; mkdir build; cd build
@@ -26,8 +27,10 @@ apt-get update
 apt-get install swig python-sympy
 
 #Clone PythonOCC so we can start building the components we need
-git clone https://github.com/tpaviot/pythonocc.git
+git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc.git
 
 mkdir $GEOMPATH && cd $GEOMPATH
 
-cmake
+#Guild the geom extension
+cmake -D OCC_INCLUDE_PATH="/usr/local/include/oce" ..
+make && make install
