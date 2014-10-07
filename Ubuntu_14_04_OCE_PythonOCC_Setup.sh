@@ -4,7 +4,7 @@
 #Set up our variables
 #TAG="OCE-0.12"
 OCETAG="OCE-0.16"
-PYTHONOCCTAG="0.5"
+PYTHONOCCTAG="0.16-pre-1"
 GEOMPATH="pythonocc/src/contrib/geom-5.1.2.7/cmake-build"
 
 # apt-get update
@@ -27,7 +27,7 @@ GEOMPATH="pythonocc/src/contrib/geom-5.1.2.7/cmake-build"
 apt-get install swig python-sympy
 
 #Clone PythonOCC so we can start building the components we need
-git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc.git
+git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
 
 mkdir $GEOMPATH && cd $GEOMPATH
 
