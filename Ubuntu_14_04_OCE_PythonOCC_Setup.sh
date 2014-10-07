@@ -27,7 +27,7 @@ POCCMAKEPATH="pythonocc-core/cmake-build"
 apt-get install swig python-sympy
 
 #Clone PythonOCC so we can start building the components we need
-git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
+git clone https://github.com/tpaviot/pythonocc-core.git
 
 mkdir $POCCMAKEPATH && cd $POCCMAKEPATH
 
