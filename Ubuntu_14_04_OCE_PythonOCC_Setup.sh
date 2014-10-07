@@ -32,5 +32,5 @@ git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
 mkdir $POCCMAKEPATH && cd $POCCMAKEPATH
 
 #Guild the geom extension
-cmake -D OCC_INCLUDE_PATH="/usr/local/include/oce" ..
+cmake -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -D OCC_INCLUDE_PATH="/usr/local/include/oce" ..
 make && make install
