@@ -29,3 +29,5 @@ apt-get install swig python-sympy
 git clone https://github.com/tpaviot/pythonocc.git
 
 mkdir $GEOMPATH && cd $GEOMPATH
+
+cmake
