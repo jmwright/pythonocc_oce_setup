@@ -7,19 +7,19 @@
 PYTHONOCCTAG="0.16-pre-1"
 POCCMAKEPATH="pythonocc-core/cmake-build"
 
-sudo apt-get install swig
+sudo apt-get install -y swig
 sudo add-apt-repository "deb http://ppa.launchpad.net/freecad-maintainers/oce-release/ubuntu precise main" -y
 sudo apt-get update -q
-sudo apt-get install liboce-ocaf-dev oce-draw
-sudo apt-get install python-wxgtk2.8
+sudo apt-get install -y liboce-ocaf-dev oce-draw
+sudo apt-get install -y python-wxgtk2.8
 sudo python -c "import wx"
-sudo apt-get install python-qt4 python-qt4-gl
+sudo apt-get install -y python-qt4 python-qt4-gl
 sudo python -c "from PyQt4 import QtGui, QtCore, QtOpenGL"
-sudo apt-get install python-pyside
+sudo apt-get install -y python-pyside
 sudo python -c "from PySide import QtGui, QtCore, QtOpenGL"
 
 #Install PythonOCC requirements
-apt-get install swig python-sympy
+apt-get install -y swig python-sympy
 
 #Clone PythonOCC so we can start building the components we need
 git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
