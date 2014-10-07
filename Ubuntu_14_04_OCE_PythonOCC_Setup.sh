@@ -5,9 +5,9 @@
 #TAG="OCE-0.12"
 OCETAG="OCE-0.16"
 PYTHONOCCTAG="0.5"
-GEOMPATH="pythonocc/src/contrib/geom-6.3.1.8/cmake-build"
+GEOMPATH="pythonocc/src/contrib/geom-5.1.2.7/cmake-build"
 
-apt-get update
+# apt-get update
 # apt-get upgrade
 
 # #Install the pre-requisites
