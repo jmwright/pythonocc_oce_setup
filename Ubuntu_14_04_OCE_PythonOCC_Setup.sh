@@ -28,4 +28,4 @@ apt-get install swig python-sympy
 #Clone PythonOCC so we can start building the components we need
 git clone https://github.com/tpaviot/pythonocc.git
 
-mkdir GOMEPATH && cd GEOMPATH
+mkdir $GEOMPATH && cd $GEOMPATH
