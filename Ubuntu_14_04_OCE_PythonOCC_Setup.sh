@@ -5,7 +5,7 @@
 #TAG="OCE-0.12"
 OCETAG="OCE-0.16"
 PYTHONOCCTAG="0.16-pre-1"
-GEOMPATH="pythonocc/src/contrib/geom-5.1.2.7/cmake-build"
+POCCMAKEPATH="pythonocc-core/cmake-build"
 
 # apt-get update
 # apt-get upgrade
@@ -29,7 +29,7 @@ apt-get install swig python-sympy
 #Clone PythonOCC so we can start building the components we need
 git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
 
-mkdir $GEOMPATH && cd $GEOMPATH
+mkdir $POCCMAKEPATH && cd $POCCMAKEPATH
 
 #Guild the geom extension
 cmake -D OCC_INCLUDE_PATH="/usr/local/include/oce" ..
