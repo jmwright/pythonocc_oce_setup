@@ -4,7 +4,7 @@
 #Set up our variables
 #TAG="OCE-0.12"
 #OCETAG="OCE-0.16"
-PYTHONOCCTAG="0.16-pre-1"
+#PYTHONOCCTAG="0.16-pre-1"
 POCCMAKEPATH="pythonocc-core/cmake-build"
 
 sudo apt-get install -y swig
@@ -22,10 +22,12 @@ sudo python -c "from PySide import QtGui, QtCore, QtOpenGL"
 apt-get install -y swig python-sympy
 
 #Clone PythonOCC so we can start building the components we need
-git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
+#TODO: Use the line immediately below this one when a release version can be tagged
+#git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
+git clone https://github.com/tpaviot/pythonocc-core.git
 
 mkdir $POCCMAKEPATH && cd $POCCMAKEPATH
 
 #Guild the geom extension
-cmake -DOCE_INCLUDE_PATH="/usr/local/include/oce" -DOCE_LIB_PATH="/usr/local/lib/oce-0.16/" ..
+cmake -DOCE_INCLUDE_PATH=/usr/include/oce -DOCE_LIB_PATH=/usr/lib ..
 make && make install
