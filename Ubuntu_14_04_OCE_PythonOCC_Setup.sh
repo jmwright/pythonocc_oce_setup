@@ -7,6 +7,9 @@
 #PYTHONOCCTAG="0.16-pre-1"
 POCCMAKEPATH="pythonocc-core/cmake-build"
 
+#Attempt to install all the pre-requisites
+apt-get install -fy git cmake libx11-dev mesa-common-dev freeglut3-dev libfreetype6-dev libc6-dev libstdc++6 libstdc++-4.8-dev build-essential gcc g++ libftgl-dev xorg-dev tcl-dev tk-dev
+
 apt-get install -y swig
 add-apt-repository "deb http://ppa.launchpad.net/freecad-maintainers/oce-release/ubuntu precise main" -y
 apt-get update -q
