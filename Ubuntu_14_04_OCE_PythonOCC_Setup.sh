@@ -13,7 +13,7 @@ apt-get install -fy git cmake libx11-dev mesa-common-dev freeglut3-dev libfreety
 apt-get install -y swig
 add-apt-repository "deb http://ppa.launchpad.net/freecad-maintainers/oce-release/ubuntu precise main" -y
 apt-get update -q
-apt-get install -y liboce-ocaf-dev oce-draw liboce-modeling-dev liboce-foundation-dev
+apt-get install -y --force-yes liboce-ocaf-dev oce-draw liboce-modeling-dev liboce-foundation-dev
 apt-get install -y python-wxgtk2.8
 python -c "import wx"
 apt-get install -y python-qt4 python-qt4-gl
