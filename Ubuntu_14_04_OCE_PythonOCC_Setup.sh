@@ -4,7 +4,7 @@
 #Set up our variables
 #TAG="OCE-0.12"
 #OCETAG="OCE-0.16"
-#PYTHONOCCTAG="0.16-pre-1"
+PYTHONOCCTAG="0.16.0"
 POCCMAKEPATH="pythonocc-core/cmake-build"
 
 #Attempt to install all the pre-requisites
@@ -25,9 +25,8 @@ python -c "from PySide import QtGui, QtCore, QtOpenGL"
 apt-get install -y swig python-sympy
 
 #Clone PythonOCC so we can start building the components we need
-#TODO: Use the line immediately below this one when a release version can be tagged
-#git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
-git clone https://github.com/tpaviot/pythonocc-core.git
+#git clone https://github.com/tpaviot/pythonocc-core.git
+git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
 
 mkdir $POCCMAKEPATH && cd $POCCMAKEPATH
 
