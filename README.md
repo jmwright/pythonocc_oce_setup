@@ -10,3 +10,9 @@ Then run the script with superuser priveleges.
 ```
 $ sudo ./Ubuntu_14_04_OCE_PythonOCC_Setup.sh
 ```
+
+After the installation is complete, you should be able to run the following example and end up with a simple GUI window.
+
+```
+python /usr/lib/python2.7/dist-packages/OCC/Display/SimpleGui.py
+```
