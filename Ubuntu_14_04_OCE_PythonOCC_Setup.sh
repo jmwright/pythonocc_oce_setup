@@ -8,7 +8,7 @@ OCEMAKEPATH="oce/build"
 POCCMAKEPATH="pythonocc-core/cmake-build"
 
 #Attempt to install all the pre-requisites
-apt-get install -fy git cmake libx11-dev mesa-common-dev freeglut3-dev libfreetype6-dev libc6-dev libstdc++6 libstdc++-4.8-dev build-essential gcc g++ libftgl-dev xorg-dev tcl-dev tk-dev python-dev swig python-wxgtk2.8 python-qt4 python-qt4-gl python-pyside swig python-sympy
+apt-get install -fy git cmake libx11-dev mesa-common-dev freeglut3-dev libfreetype6-dev libc6-dev libstdc++6 libstdc++-4.8-dev build-essential gcc g++ libftgl-dev xorg-dev tcl-dev tk-dev python-dev swig python-wxgtk2.8 python-qt4 python-qt4-gl python-pyside python-sympy
 
 git clone --branch $OCETAG https://github.com/tpaviot/oce.git
 
@@ -29,6 +29,6 @@ git clone --branch $PYTHONOCCTAG https://github.com/tpaviot/pythonocc-core.git
 
 mkdir $POCCMAKEPATH && cd $POCCMAKEPATH
 
-#Guild the geom extension
+#Build the geom extension
 cmake -DOCE_INCLUDE_PATH=/usr/local/include/oce -DOCE_LIB_PATH=/usr/local/lib ..
 make && make install
