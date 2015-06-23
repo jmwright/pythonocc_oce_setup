@@ -15,7 +15,7 @@ git clone --branch $OCETAG https://github.com/tpaviot/oce.git
 mkdir $OCEMAKEPATH && cd $OCEMAKEPATH
 
 cmake ..
-make
+make '-j'$(nproc)
 make install/strip
 
 python -c "import wx"
