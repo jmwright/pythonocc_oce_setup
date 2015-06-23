@@ -15,7 +15,7 @@ git clone --branch $OCETAG https://github.com/tpaviot/oce.git
 mkdir $OCEMAKEPATH && cd $OCEMAKEPATH
 
 cmake ..
-make
+make '-j'$(nproc)
 make install/strip
 
 python -c "import wx"
@@ -31,4 +31,4 @@ mkdir $POCCMAKEPATH && cd $POCCMAKEPATH
 
 #Build the geom extension
 cmake -DOCE_INCLUDE_PATH=/usr/local/include/oce -DOCE_LIB_PATH=/usr/local/lib ..
-make && make install
+make '-j'$(nproc) && make install
